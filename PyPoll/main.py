@@ -52,7 +52,7 @@ output=[                  # First few lines are added when intializing output li
 for i in range(len(candidateList)):     # iterator to run through candidate list
     if voteCountList[i] > mostVotes[1]: # checking to see if candidate i has most votes
         mostVotes = [candidateList[i], voteCountList[i]]    # assigns candidate i to mostVotes if it has the most votes so far
-    output.append(f'{candidateList[i]} {format(voteCountList[i]/voteTotal,".3%")} ({voteCountList[i]})')    # adds candidate name, calculates % of vote, and adds final votecount
+    output.append(f'{candidateList[i]}: {format(voteCountList[i]/voteTotal,".3%")} ({voteCountList[i]})')    # adds candidate name, calculates % of vote, and adds final votecount
  
 output.append(spacer)
 output.append(f'Winner: {mostVotes[0]}')  #print out winner
